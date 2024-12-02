@@ -1,7 +1,9 @@
+
+
 const INPUT: &str = include_str!("../inputs/day1.txt");
 fn main() {
     let mut array1: Vec<i32> = Vec::new();
-    let mut array2 :Vec<i32> = Vec::new();
+    let mut array2: Vec<i32> = Vec::new();
     let mut count = 0;
     for line in INPUT.lines() {
         let numbers: Vec<i32> = line.split_whitespace()
@@ -14,10 +16,10 @@ fn main() {
     }
     array1.sort();
     array2.sort();
-
-    for i in 0..array1.len() {
-        count += (array1[i] - array2[i]).abs()
+    for number in array1 {
+        count += number * array2.iter().filter(|&n| *n == number).count() as i32;
     }
-
-    println!("{}",count)
+    println!("{}", count);
+    
 }
+
