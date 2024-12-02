@@ -21,5 +21,4 @@ fn check_i_safe(record: Vec<i32>) -> bool{
         .all(|w| w[0] > w[1]&& (w[0]-w[1]).abs() >0
             && (w[0]-w[1]).abs() <4);
     is_decreasing || is_increasing
-    
 }
