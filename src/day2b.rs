@@ -29,7 +29,7 @@ fn check_if_safe_without_entry(record: &Vec<i32>) -> bool{
     for i in 0..record.len(){
         let mut record_clone = record.clone();
         record_clone.remove(i);
-        if(check_if_safe(&record_clone)){
+        if check_if_safe(&record_clone) {
             return true;
         };
     }
