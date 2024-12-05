@@ -16,5 +16,5 @@ fn main(){
             result+= a*b;
         });
     }
-    println!("{}",result)
+    println!("{}",result);
 }
