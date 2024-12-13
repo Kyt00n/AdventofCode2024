@@ -29,7 +29,7 @@ fn main(){
         let mut turns = 0;
         loop {
             turns+=1;
-            if turns > 100000{
+            if turns > 10000{
                 return true
             }
             visited.insert(start_me);
